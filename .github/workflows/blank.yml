@@ -1,0 +1,19 @@
+name: Keep Render Service Alive
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+    
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  ping-render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Render service
+        run: curl -I https://your-service.onrender.com || true
