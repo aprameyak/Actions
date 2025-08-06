@@ -15,17 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping PathosBackend
-        run: curl -I https://pathosbackend.onrender.com || true
-
+    
       - name: Ping GitRecap
         run: curl -I https://gitrecap.onrender.com || true
 
       - name: Ping GitaGPT-1
         run: curl -I https://gitagpt-1.onrender.com || true
-
-      - name: Ping TrackNest
-        run: curl -I https://tracknest-i73t.onrender.com || true
-
-      - name: Ping FitSync
-        run: curl -I https://fitsync-iwq4.onrender.com || true
